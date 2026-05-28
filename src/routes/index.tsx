@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Phone, MessageCircle, MapPin, Mail, ShieldCheck, GraduationCap, Clock,
   Car, Scale, FileCheck2, ClipboardList, PhoneCall, Search, FileText, LifeBuoy,
-  Wrench, Gauge, History, Camera, Building2, ChevronRight, ArrowRight, CheckCircle2,
+  Wrench, Gauge, History, Camera, Building2, ChevronRight, ArrowRight, CheckCircle2, Zap,
 } from "lucide-react";
 import { SITE, whatsappHref } from "@/lib/site";
 import { SiteLayout } from "@/components/site/Layout";
-import { PrimaryCTA, WhatsappCTA } from "@/components/site/CTAButtons";
+import { PrimaryCTA, WhatsappCTA, TertiaryCTA } from "@/components/site/CTAButtons";
 import { ContactSection } from "@/components/site/ContactSection";
 import heroImg from "@/assets/hero-gutachter.jpg";
 
@@ -14,20 +14,20 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "BEI Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
-      { name: "description", content: "Unabhängiger Kfz-Sachverständiger in Offenbach und Rhein-Main. Schnell erreichbar, kurzfristige Termine, Vor-Ort-Besichtigung. Unfallgutachten, Schadengutachten, Wertgutachten." },
+      { name: "description", content: "Unabhängiger Kfz-Sachverständiger in Offenbach und Rhein-Main. Antwort in Sekunden per Telefon oder WhatsApp. Unfallgutachten, Schadengutachten, Wertgutachten." },
       { property: "og:title", content: "BEI Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
-      { property: "og:description", content: "Professionelle Kfz-Gutachten nach Unfall oder Schaden. Klar, schnell und unkompliziert." },
+      { property: "og:description", content: "Professionelle Kfz-Gutachten nach Unfall oder Schaden. Schnell, unabhängig und unkompliziert." },
     ],
   }),
   component: HomePage,
 });
 
 const trust = [
-  { icon: ShieldCheck, label: "Zertifizierter Kfz-Sachverständiger" },
-  { icon: GraduationCap, label: "Wirtschaftsingenieur (Maschinenbau)" },
-  { icon: Clock, label: "Kurzfristige Termine" },
-  { icon: MapPin, label: "Vor-Ort-Service" },
-  { icon: Scale, label: "Kanzlei-Kooperation" },
+  { icon: ShieldCheck, title: "Zertifiziert", sub: "Kfz-Sachverständiger" },
+  { icon: GraduationCap, title: "Wirtschaftsingenieur", sub: "Schwerpunkt Maschinenbau" },
+  { icon: Zap, title: "Antwort in Sekunden", sub: "Telefon & WhatsApp" },
+  { icon: Clock, title: "Kurzfristige Termine", sub: "Oft binnen weniger Tage" },
+  { icon: MapPin, title: "Vor-Ort-Service", sub: "Offenbach & Rhein-Main" },
 ];
 
 const services = [
@@ -42,10 +42,9 @@ const services = [
 ];
 
 const steps = [
-  { icon: PhoneCall, title: "Kontakt aufnehmen", desc: "Rufen Sie an, schreiben Sie per WhatsApp oder senden Sie eine Anfrage." },
-  { icon: Search, title: "Schaden begutachten lassen", desc: "Das Fahrzeug wird professionell geprüft – bei Bedarf auch vor Ort." },
-  { icon: FileText, title: "Gutachten erhalten", desc: "Sie erhalten eine klare Dokumentation des Schadens und der relevanten Werte." },
-  { icon: LifeBuoy, title: "Weiter unterstützt bleiben", desc: "Auch nach Erstellung des Gutachtens bleibt BEI Gutachten für Rückfragen erreichbar." },
+  { icon: PhoneCall, title: "Kontakt aufnehmen", desc: "Rufen Sie an, schreiben Sie per WhatsApp oder senden Sie eine kurze Anfrage." },
+  { icon: Search, title: "Schaden begutachten lassen", desc: "Flexible und kurzfristige Begutachtung – bei Bedarf auch direkt vor Ort." },
+  { icon: LifeBuoy, title: "Gutachten erhalten & unterstützt bleiben", desc: "Sie erhalten eine klare Dokumentation und BEI Gutachten bleibt für Rückfragen erreichbar." },
 ];
 
 const reasons = [
@@ -59,12 +58,12 @@ const reasons = [
 ];
 
 const faqs = [
+  { q: "Wie schnell bekomme ich eine Rückmeldung?", a: "In der Regel antworten wir in wenigen Sekunden bis Minuten – per Telefon oder WhatsApp. Schreiben oder rufen Sie direkt an, gerade nach einem Unfall." },
+  { q: "Kommen Sie auch zu mir vor Ort?", a: "Ja. In Offenbach und der Rhein-Main-Region ist eine Vor-Ort-Besichtigung in der Regel kurzfristig möglich – zuhause, am Unfallort oder zur Werkstatt." },
   { q: "Wann brauche ich ein Kfz-Gutachten?", a: "Immer dann, wenn ein Schaden objektiv dokumentiert oder ein Fahrzeugwert nachvollziehbar bestimmt werden soll – nach Unfall, bei Versicherungsfällen oder vor Kauf und Verkauf." },
-  { q: "Kommen Sie auch zu mir vor Ort?", a: "Ja. In Offenbach und der Rhein-Main-Region ist eine Vor-Ort-Besichtigung in der Regel kurzfristig möglich." },
-  { q: "Wie schnell bekomme ich einen Termin?", a: "Wir bemühen uns um kurzfristige Termine. Häufig ist eine Begutachtung innerhalb weniger Tage möglich." },
-  { q: "Kann ich Sie direkt per WhatsApp kontaktieren?", a: "Ja, eine Kontaktaufnahme per WhatsApp ist ausdrücklich erwünscht – auch zum Senden erster Fotos." },
-  { q: "Unterstützen Sie auch nach Erstellung des Gutachtens?", a: "Selbstverständlich. Für Rückfragen von Ihnen, Ihrer Versicherung oder Ihrem Anwalt bleiben wir ansprechbar." },
   { q: "Für welche Region bieten Sie Gutachten an?", a: "Schwerpunkt ist Offenbach und die gesamte Rhein-Main-Region." },
+  { q: "Kann ich direkt per WhatsApp schreiben?", a: "Ja, eine Kontaktaufnahme per WhatsApp ist ausdrücklich erwünscht – auch zum Senden erster Fotos des Schadens." },
+  { q: "Sind Sie auch nach dem Gutachten erreichbar?", a: "Selbstverständlich. Für Rückfragen von Ihnen, Ihrer Versicherung oder Ihrem Anwalt bleiben wir ansprechbar." },
 ];
 
 function HomePage() {
@@ -72,28 +71,33 @@ function HomePage() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-surface to-background">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-2 lg:gap-12 lg:px-6 lg:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-2 lg:gap-14 lg:px-6 lg:py-20">
           <div className="flex flex-col justify-center">
             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-primary">
               <span className="h-1.5 w-1.5 rounded-full bg-whatsapp" />
               Kfz-Sachverständiger · {SITE.area}
             </span>
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-primary md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]">
-              Kfz-Gutachten in Offenbach & Rhein-Main –{" "}
-              <span className="text-cta">schnell, unabhängig und unkompliziert</span>
+            <h1 className="mt-5 text-[2rem] font-semibold leading-[1.1] tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]">
+              Unfall oder Fahrzeugschaden?{" "}
+              <span className="text-cta">Ihr Kfz-Gutachten in Offenbach & Rhein-Main.</span>
             </h1>
             <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
-              Nach einem Unfall oder Fahrzeugschaden unterstützt {SITE.name} Sie mit
-              professioneller Begutachtung, klarer Dokumentation und schneller Erreichbarkeit.
+              {SITE.name} unterstützt Sie schnell, unabhängig und unkompliziert –
+              mit professioneller Begutachtung, klarer Dokumentation und direkter Erreichbarkeit.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <PrimaryCTA />
-              <WhatsappCTA />
+            <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-cta/10 px-3 py-2 text-sm font-semibold text-cta">
+              <Zap className="h-4 w-4" />
+              Antwort garantiert in wenigen Sekunden per Telefon oder WhatsApp.
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Kurzfristige Termine und Vor-Ort-Besichtigung möglich.
-            </p>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <PrimaryCTA className="w-full sm:w-auto" />
+              <WhatsappCTA className="w-full sm:w-auto" />
+            </div>
+            <div className="mt-3">
+              <TertiaryCTA />
+            </div>
 
             <dl className="mt-8 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
               <InfoRow icon={Phone} label="Telefon" value={SITE.phoneDisplay} href={SITE.phoneHref} />
@@ -116,12 +120,12 @@ function HomePage() {
             </div>
             <div className="absolute -bottom-4 left-4 right-4 rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-elevated)] md:left-auto md:right-6 md:max-w-xs">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-md bg-cta/10 text-cta">
-                  <Clock className="h-5 w-5" />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-cta/10 text-cta">
+                  <Zap className="h-5 w-5" />
                 </span>
-                <div>
-                  <p className="text-xs text-muted-foreground">Schnell erreichbar</p>
-                  <p className="text-sm font-semibold text-primary">Antwort meist am selben Tag</p>
+                <div className="min-w-0">
+                  <p className="text-xs text-muted-foreground">Direkt erreichbar</p>
+                  <p className="text-sm font-semibold text-primary">Antwort in wenigen Sekunden</p>
                 </div>
               </div>
             </div>
@@ -132,13 +136,23 @@ function HomePage() {
       {/* TRUST BAR */}
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-6xl px-4 py-8 lg:px-6">
-          <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {trust.map((t) => (
-              <li key={t.label} className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
+              <li
+                key={t.title}
+                className="flex items-start gap-3 rounded-lg border border-border bg-card p-3.5"
+              >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-primary">
                   <t.icon className="h-4 w-4" />
                 </span>
-                <span className="text-xs font-medium text-foreground/80 md:text-sm">{t.label}</span>
+                <div className="min-w-0">
+                  <p className="break-words text-[13px] font-semibold leading-tight text-primary">
+                    {t.title}
+                  </p>
+                  <p className="mt-0.5 break-words text-[11px] leading-snug text-muted-foreground">
+                    {t.sub}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
@@ -152,24 +166,23 @@ function HomePage() {
             <p className="text-sm font-medium text-cta">Nach einem Unfall</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Schnelle Hilfe nach Unfall oder Schaden</h2>
             <p className="mt-4 text-base text-muted-foreground">
-              Nach einem Unfall sind viele Menschen unsicher: Wer hilft, was ist wichtig, welche
-              Schritte stehen jetzt an? {SITE.name} verschafft Ihnen ruhig und sachlich Orientierung –
-              mit klarer Begutachtung, verständlicher Dokumentation und einer Ansprechperson, die
-              erreichbar bleibt.
+              Nach einem Unfall sind viele Menschen unsicher. {SITE.name} verschafft Ihnen ruhig
+              und sachlich Orientierung – mit klarer Begutachtung, verständlicher Dokumentation
+              und einer Ansprechperson, die erreichbar bleibt.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-foreground/80">
               {["Sie schildern uns kurz die Situation.", "Wir vereinbaren zeitnah einen Termin – auch vor Ort.", "Sie erhalten ein klares, unabhängiges Gutachten."].map((s) => (
                 <li key={s} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-cta" /> {s}</li>
               ))}
             </ul>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <PrimaryCTA />
               <WhatsappCTA />
             </div>
           </div>
           <div className="grid gap-4">
             {[
-              { icon: PhoneCall, t: "Direkt erreichbar", d: "Telefon, WhatsApp oder Formular – wählen Sie den für Sie einfachsten Weg." },
+              { icon: Zap, t: "Direkt erreichbar", d: "Antwort garantiert in wenigen Sekunden per Telefon oder WhatsApp." },
               { icon: MapPin, t: "Vor-Ort-Service", d: "Auf Wunsch kommen wir zu Ihnen – zuhause, am Unfallort oder zur Werkstatt." },
               { icon: ShieldCheck, t: "Unabhängig & sachlich", d: "Wir bewerten neutral – ohne Druck, ohne Schönfärberei." },
             ].map((c) => (
@@ -214,12 +227,15 @@ function HomePage() {
         </div>
       </section>
 
-      {/* PROCESS */}
+      {/* PROCESS – 3 steps */}
       <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-16 lg:px-6 lg:py-24">
           <p className="text-sm font-medium text-cta">Ablauf</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">In 4 klaren Schritten zum Gutachten</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">In 3 klaren Schritten zum Gutachten</h2>
+          <p className="mt-3 max-w-2xl text-base text-muted-foreground">
+            Unkompliziert, schnell, persönlich – Sie können sofort starten.
+          </p>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
             {steps.map((s, i) => (
               <div key={s.title} className="relative rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
                 <span className="absolute -top-3 left-6 inline-flex items-center rounded-full bg-cta px-2.5 py-0.5 text-xs font-semibold text-cta-foreground">
@@ -228,7 +244,7 @@ function HomePage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-md bg-brand text-brand-foreground">
                   <s.icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 text-base font-semibold text-primary">{s.title}</h3>
+                <h3 className="mt-4 text-base font-semibold leading-snug text-primary">{s.title}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground">{s.desc}</p>
               </div>
             ))}
@@ -244,8 +260,7 @@ function HomePage() {
             <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Warum ein unabhängiges Kfz-Gutachten wichtig ist</h2>
             <p className="mt-4 text-base text-muted-foreground">
               Ein neutrales Gutachten schafft eine belastbare Grundlage – für Sie, Ihre
-              Versicherung, Ihren Anwalt und die Werkstatt. So vermeiden Sie unklare
-              Bewertungen und treffen Entscheidungen auf einer soliden Basis.
+              Versicherung, Ihren Anwalt und die Werkstatt.
             </p>
             <Link to="/warum-gutachten" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-cta hover:underline">
               Mehr dazu erfahren <ChevronRight className="h-4 w-4" />
@@ -292,7 +307,7 @@ function HomePage() {
 function InfoRow({ icon: Icon, label, value, href, external }: { icon: any; label: string; value: string; href?: string; external?: boolean }) {
   const content = (
     <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-3 py-2.5">
-      <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-primary"><Icon className="h-4 w-4" /></span>
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-accent text-primary"><Icon className="h-4 w-4" /></span>
       <div className="min-w-0">
         <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
         <p className="truncate text-sm font-medium text-primary">{value}</p>
@@ -336,13 +351,13 @@ function AboutSection() {
               { i: ShieldCheck, t: "Zertifiziert", d: "Zertifizierter Kfz-Sachverständiger." },
               { i: GraduationCap, t: "Wirtschaftsingenieur", d: "Schwerpunkt Maschinenbau." },
               { i: ClipboardList, t: "Weiterbildung", d: "Regelmäßige Fortbildungen." },
-              { i: PhoneCall, t: "Persönlich erreichbar", d: "Direkter Kontakt – auch nach dem Gutachten." },
+              { i: PhoneCall, t: "Persönlich erreichbar", d: "Antwort in wenigen Sekunden." },
               { i: Scale, t: "Kanzlei-Kooperation", d: "Zusammenarbeit mit einer Kanzlei." },
               { i: Building2, t: "Lokal verwurzelt", d: "Offenbach & Rhein-Main." },
             ].map((x) => (
               <li key={x.t} className="flex gap-3 rounded-lg border border-border bg-card p-4">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-primary"><x.i className="h-4 w-4" /></span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-semibold text-primary">{x.t}</p>
                   <p className="text-xs text-muted-foreground">{x.d}</p>
                 </div>
