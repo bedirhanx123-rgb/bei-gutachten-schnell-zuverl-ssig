@@ -11,39 +11,35 @@ export function ContactForm() {
       }}
       className="grid gap-4"
     >
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Name" name="name" required />
-        <Field label="Telefonnummer" name="phone" type="tel" required />
-      </div>
-      <Field label="E-Mail" name="email" type="email" required />
+      <Field label="Name" name="name" required autoComplete="name" />
+      <Field
+        label="Telefonnummer"
+        name="phone"
+        type="tel"
+        required
+        autoComplete="tel"
+        hint="Für schnellste Rückmeldung – meist in wenigen Sekunden."
+      />
       <div className="grid gap-1.5">
-        <label className="text-sm font-medium text-primary" htmlFor="topic">Anliegen (optional)</label>
-        <select id="topic" name="topic" className="h-11 rounded-md border border-input bg-background px-3 text-sm">
-          <option>Bitte wählen</option>
+        <label className="text-sm font-medium text-primary" htmlFor="topic">Anliegen</label>
+        <select id="topic" name="topic" required className="h-11 rounded-md border border-input bg-background px-3 text-sm">
+          <option value="">Bitte wählen</option>
           <option>Unfallgutachten</option>
           <option>Schadengutachten</option>
           <option>Fahrzeugbewertung</option>
           <option>Sonstiges</option>
         </select>
       </div>
-      <div className="grid gap-1.5">
-        <label className="text-sm font-medium text-primary" htmlFor="message">Nachricht</label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          required
-          className="rounded-md border border-input bg-background px-3 py-2 text-sm"
-          placeholder="Beschreiben Sie kurz Ihr Anliegen."
-        />
-      </div>
+      <Field label="E-Mail (optional)" name="email" type="email" autoComplete="email" />
       <button
         type="submit"
         className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-cta px-6 text-sm font-semibold text-cta-foreground shadow-sm transition hover:brightness-110"
       >
         <Send className="h-4 w-4" /> Anfrage senden
       </button>
-      <p className="text-xs text-muted-foreground">Wir melden uns schnellstmöglich zurück.</p>
+      <p className="text-xs text-muted-foreground">
+        Antwort garantiert in wenigen Sekunden per Telefon oder WhatsApp.
+      </p>
       {sent && (
         <p className="rounded-md border border-whatsapp/30 bg-whatsapp/10 px-3 py-2 text-sm text-whatsapp">
           Vielen Dank, Ihre Anfrage wurde übermittelt.
@@ -53,7 +49,9 @@ export function ContactForm() {
   );
 }
 
-function Field({ label, name, type = "text", required = false }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({
+  label, name, type = "text", required = false, autoComplete, hint,
+}: { label: string; name: string; type?: string; required?: boolean; autoComplete?: string; hint?: string }) {
   return (
     <div className="grid gap-1.5">
       <label className="text-sm font-medium text-primary" htmlFor={name}>{label}</label>
@@ -62,8 +60,10 @@ function Field({ label, name, type = "text", required = false }: { label: string
         name={name}
         type={type}
         required={required}
+        autoComplete={autoComplete}
         className="h-11 rounded-md border border-input bg-background px-3 text-sm outline-none ring-ring/40 focus:ring-2"
       />
+      {hint && <p className="text-xs text-muted-foreground">{hint}</p>}
     </div>
   );
 }
