@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "BEI Gutachten",
-  phoneDisplay: "+49 000 000 00 00",
-  phoneHref: "tel:+490000000000",
-  whatsappNumber: "490000000000",
-  whatsappMessage: "Hallo BEI Gutachten, ich möchte ein Kfz-Gutachten anfragen. Bitte kontaktieren Sie mich.",
-  email: "kontakt@bei-gutachten.de",
+  name: "BAY Gutachten",
+  phoneDisplay: "0178 6825246",
+  phoneHref: "tel:+491786825246",
+  whatsappNumber: "491786825246",
+  whatsappMessage: "Hallo BAY Gutachten, ich möchte ein Kfz-Gutachten anfragen. Bitte kontaktieren Sie mich.",
+  email: "kontakt@bay-gutachten.de",
   area: "Offenbach & Rhein-Main",
 };
 

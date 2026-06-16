@@ -13,9 +13,9 @@ import heroImg from "@/assets/hero-gutachter.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "BEI Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
+      { title: "BAY Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
       { name: "description", content: "Unabhängiger Kfz-Sachverständiger in Offenbach und Rhein-Main. Antwort in Sekunden per Telefon oder WhatsApp. Unfallgutachten, Schadengutachten, Wertgutachten." },
-      { property: "og:title", content: "BEI Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
+      { property: "og:title", content: "BAY Gutachten – Kfz-Sachverständiger Offenbach & Rhein-Main" },
       { property: "og:description", content: "Professionelle Kfz-Gutachten nach Unfall oder Schaden. Schnell, unabhängig und unkompliziert." },
     ],
   }),
@@ -44,7 +44,7 @@ const services = [
 const steps = [
   { icon: PhoneCall, title: "Kontakt aufnehmen", desc: "Rufen Sie an, schreiben Sie per WhatsApp oder senden Sie eine kurze Anfrage." },
   { icon: Search, title: "Schaden begutachten lassen", desc: "Flexible und kurzfristige Begutachtung – bei Bedarf auch direkt vor Ort." },
-  { icon: LifeBuoy, title: "Gutachten erhalten & unterstützt bleiben", desc: "Sie erhalten eine klare Dokumentation und BEI Gutachten bleibt für Rückfragen erreichbar." },
+  { icon: LifeBuoy, title: "Gutachten erhalten & unterstützt bleiben", desc: "Sie erhalten eine klare Dokumentation und BAY Gutachten bleibt für Rückfragen erreichbar." },
 ];
 
 const reasons = [
@@ -323,7 +323,7 @@ function AboutSection() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-medium text-cta">Über BEI Gutachten</p>
+          <p className="text-sm font-medium text-cta">Über BAY Gutachten</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Technische Expertise mit persönlicher Ansprache</h2>
           <p className="mt-4 text-base text-muted-foreground">
             Hinter {SITE.name} steht ein zertifizierter Kfz-Sachverständiger mit

@@ -7,9 +7,9 @@ import { PrimaryCTA, WhatsappCTA } from "@/components/site/CTAButtons";
 export const Route = createFileRoute("/service")({
   head: () => ({
     meta: [
-      { title: "Unser Service – BEI Gutachten Offenbach" },
+      { title: "Unser Service – BAY Gutachten Offenbach" },
       { name: "description", content: "Schadengutachten, Unfallgutachten, Wertgutachten, Oldtimergutachten und Vor-Ort-Besichtigung in Offenbach und Rhein-Main." },
-      { property: "og:title", content: "Unser Service – BEI Gutachten" },
+      { property: "og:title", content: "Unser Service – BAY Gutachten" },
       { property: "og:description", content: "Leistungen eines unabhängigen Kfz-Sachverständigen für Privatpersonen, Werkstätten, Autohäuser und Anwälte." },
     ],
   }),
