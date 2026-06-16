@@ -65,7 +65,6 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-muted"
                 activeProps={{ className: "bg-muted text-primary" }}
-                activeOptions={{ exact: n.to === "/" }}
               >
                 {n.label}
               </Link>
