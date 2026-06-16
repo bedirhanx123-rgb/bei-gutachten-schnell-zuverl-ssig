@@ -4,7 +4,6 @@ import { useState } from "react";
 import { SITE } from "@/lib/site";
 
 const nav = [
-  { to: "/", label: "Home" },
   { to: "/service", label: "Unser Service" },
   { to: "/warum-gutachten", label: "Warum ein Gutachten?" },
   { to: "/kontakt", label: "Kontakt" },
