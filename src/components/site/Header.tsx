@@ -4,7 +4,6 @@ import { useState } from "react";
 import { SITE } from "@/lib/site";
 
 const nav = [
-  { to: "/", label: "Home" },
   { to: "/service", label: "Unser Service" },
   { to: "/warum-gutachten", label: "Warum ein Gutachten?" },
   { to: "/kontakt", label: "Kontakt" },
@@ -29,7 +28,6 @@ export function Header() {
               to={n.to}
               className="text-sm font-medium text-foreground/70 transition hover:text-primary"
               activeProps={{ className: "text-primary" }}
-              activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
             </Link>
@@ -67,7 +65,6 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-muted"
                 activeProps={{ className: "bg-muted text-primary" }}
-                activeOptions={{ exact: n.to === "/" }}
               >
                 {n.label}
               </Link>

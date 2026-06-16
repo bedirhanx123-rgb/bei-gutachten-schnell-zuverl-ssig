@@ -81,30 +81,14 @@ function HomePage() {
               Unfall oder Fahrzeugschaden?{" "}
               <span className="text-cta">Ihr Kfz-Gutachten in Offenbach & Rhein-Main.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
-              {SITE.name} unterstützt Sie schnell, unabhängig und unkompliziert –
-              mit professioneller Begutachtung, klarer Dokumentation und direkter Erreichbarkeit.
+            <p className="mt-4 max-w-xl text-base text-muted-foreground">
+              Schnell, unabhängig und unkompliziert. Antwort in Sekunden per Telefon oder WhatsApp.
             </p>
-
-            <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-cta/10 px-3 py-2 text-sm font-semibold text-cta">
-              <Zap className="h-4 w-4" />
-              Antwort garantiert in wenigen Sekunden per Telefon oder WhatsApp.
-            </div>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <PrimaryCTA className="w-full sm:w-auto" />
               <WhatsappCTA className="w-full sm:w-auto" />
             </div>
-            <div className="mt-3">
-              <TertiaryCTA />
-            </div>
-
-            <dl className="mt-8 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
-              <InfoRow icon={Phone} label="Telefon" value={SITE.phoneDisplay} href={SITE.phoneHref} />
-              <InfoRow icon={MessageCircle} label="WhatsApp" value="Direkt schreiben" href={whatsappHref} external />
-              <InfoRow icon={Mail} label="E-Mail" value={SITE.email} href={`mailto:${SITE.email}`} />
-              <InfoRow icon={MapPin} label="Einsatzgebiet" value={SITE.area} />
-            </dl>
           </div>
 
           <div className="relative">
