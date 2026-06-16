@@ -28,7 +28,6 @@ export function Header() {
               to={n.to}
               className="text-sm font-medium text-foreground/70 transition hover:text-primary"
               activeProps={{ className: "text-primary" }}
-              activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
             </Link>
