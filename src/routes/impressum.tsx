@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/impressum")({
-  head: () => ({ meta: [{ title: "Impressum – BEI Gutachten" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [{ title: "Impressum – BAY Gutachten" }, { name: "robots", content: "noindex" }] }),
   component: () => (
     <SiteLayout>
       <section className="bg-background">
@@ -12,10 +12,10 @@ export const Route = createFileRoute("/impressum")({
             Dies ist ein Platzhalter. Der finale rechtliche Text wird hier später ergänzt.
           </p>
           <div className="mt-8 space-y-4 text-sm text-foreground/80">
-            <p><strong>Anbieter:</strong> BEI Gutachten – Kfz-Sachverständiger</p>
+            <p><strong>Anbieter:</strong> BAY Gutachten – Kfz-Sachverständiger</p>
             <p><strong>Anschrift:</strong> Platzhalter Straße 1, 63065 Offenbach am Main</p>
-            <p><strong>Telefon:</strong> +49 000 000 00 00</p>
-            <p><strong>E-Mail:</strong> kontakt@bei-gutachten.de</p>
+            <p><strong>Telefon:</strong> 0178 6825246</p>
+            <p><strong>E-Mail:</strong> kontakt@bay-gutachten.de</p>
             <p><strong>Verantwortlich i.S.d. § 18 MStV:</strong> Platzhalter</p>
           </div>
         </div>

@@ -5,9 +5,9 @@ import { ContactSection } from "@/components/site/ContactSection";
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt – BEI Gutachten Offenbach" },
-      { name: "description", content: "Kontaktieren Sie BEI Gutachten per Telefon, WhatsApp, E-Mail oder Formular. Kurzfristige Termine in Offenbach und Rhein-Main." },
-      { property: "og:title", content: "Kontakt – BEI Gutachten" },
+      { title: "Kontakt – BAY Gutachten Offenbach" },
+      { name: "description", content: "Kontaktieren Sie BAY Gutachten per Telefon, WhatsApp, E-Mail oder Formular. Kurzfristige Termine in Offenbach und Rhein-Main." },
+      { property: "og:title", content: "Kontakt – BAY Gutachten" },
       { property: "og:description", content: "Schnell, unkompliziert und persönlich – nehmen Sie direkt Kontakt auf." },
     ],
   }),

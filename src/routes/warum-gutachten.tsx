@@ -7,7 +7,7 @@ import { PrimaryCTA, WhatsappCTA } from "@/components/site/CTAButtons";
 export const Route = createFileRoute("/warum-gutachten")({
   head: () => ({
     meta: [
-      { title: "Warum ein Kfz-Gutachten? – BEI Gutachten" },
+      { title: "Warum ein Kfz-Gutachten? – BAY Gutachten" },
       { name: "description", content: "Ein unabhängiges Kfz-Gutachten schafft Sicherheit nach Unfall oder Schaden. Klar dokumentiert für Versicherung, Anwalt und Werkstatt." },
       { property: "og:title", content: "Warum ein unabhängiges Kfz-Gutachten wichtig ist" },
       { property: "og:description", content: "Objektive Schadenbewertung, Beweissicherung, Einschätzung von Reparaturkosten und Wertminderung." },
@@ -58,7 +58,7 @@ function WhyPage() {
           <div className="mt-10 rounded-2xl border border-border bg-surface p-6 md:p-8">
             <h3 className="text-xl font-semibold text-primary">Unabhängige Dokumentation</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Ein Gutachten von BEI Gutachten ist nachvollziehbar aufgebaut, klar verständlich
+              Ein Gutachten von BAY Gutachten ist nachvollziehbar aufgebaut, klar verständlich
               und nicht an einzelne Interessen gebunden. So bleibt die Bewertung belastbar –
               auch wenn später Fragen aufkommen.
             </p>
