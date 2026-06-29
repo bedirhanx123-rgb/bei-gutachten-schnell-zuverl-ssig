@@ -72,18 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "BAY Gutachten provides expert vehicle appraisal services for accident and damage claims." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "BAY Gutachten provides expert vehicle appraisal services for accident and damage claims." },
+      { title: "BAY Gutachten – Kfz-Sachverständiger in Offenbach am Main" },
+      { name: "description", content: "BAY Gutachten – unabhängiger Kfz-Sachverständiger in Offenbach am Main. Schaden- und Unfallgutachten für Offenbach, Frankfurt, Hanau und das Rhein-Main-Gebiet." },
+      { property: "og:title", content: "BAY Gutachten – Kfz-Sachverständiger Offenbach" },
+      { property: "og:description", content: "Schaden- und Unfallgutachten in Offenbach am Main und Rhein-Main. Direkt erreichbar per Telefon oder WhatsApp." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "BAY Gutachten provides expert vehicle appraisal services for accident and damage claims." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d70ffd3f-188c-4bf2-a8e9-bd7efa9d752e/id-preview-8cb211fc--94e2da01-fd68-494b-ac25-abfdbfcc442d.lovable.app-1779970530730.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d70ffd3f-188c-4bf2-a8e9-bd7efa9d752e/id-preview-8cb211fc--94e2da01-fd68-494b-ac25-abfdbfcc442d.lovable.app-1779970530730.png" },
+      { property: "og:site_name", content: "BAY Gutachten" },
+      { property: "og:locale", content: "de_DE" },
     ],
     links: [
       {
@@ -100,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <HeadContent />
       </head>
