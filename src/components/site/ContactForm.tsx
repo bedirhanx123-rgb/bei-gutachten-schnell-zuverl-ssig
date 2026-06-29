@@ -18,7 +18,7 @@ export function ContactForm() {
         type="tel"
         required
         autoComplete="tel"
-        hint="Für schnellste Rückmeldung – meist in wenigen Sekunden."
+        hint="Wir rufen zurück – meist noch am selben Tag."
       />
       <div className="grid gap-1.5">
         <label className="text-sm font-medium text-primary" htmlFor="topic">Anliegen</label>
@@ -38,7 +38,7 @@ export function ContactForm() {
         <Send className="h-4 w-4" /> Anfrage senden
       </button>
       <p className="text-xs text-muted-foreground">
-        Antwort garantiert in wenigen Sekunden per Telefon oder WhatsApp.
+        Schneller geht es telefonisch oder per WhatsApp.
       </p>
       {sent && (
         <p className="rounded-md border border-whatsapp/30 bg-whatsapp/10 px-3 py-2 text-sm text-whatsapp">

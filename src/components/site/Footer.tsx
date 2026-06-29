@@ -14,12 +14,20 @@ export function Footer() {
             <span className="text-lg font-semibold text-primary">{SITE.name}</span>
           </div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-            Unabhängiger Kfz-Sachverständiger für Offenbach und die Rhein-Main-Region.
-            Schnell erreichbar, klar in der Dokumentation, persönlich im Kontakt.
+            Kfz-Sachverständigenbüro in Offenbach am Main. Schadengutachten,
+            Unfallgutachten und Fahrzeugbewertung für Privatpersonen in Offenbach,
+            Frankfurt, Hanau und dem Rhein-Main-Gebiet.
           </p>
-          <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="h-4 w-4" /> Einsatzgebiet: {SITE.area}
-          </div>
+          <address className="mt-4 not-italic text-sm text-foreground/80">
+            <div className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+              <div>
+                <div>{SITE.legalName}</div>
+                <div>{SITE.street}</div>
+                <div>{SITE.city}</div>
+              </div>
+            </div>
+          </address>
         </div>
 
         <div>
@@ -47,7 +55,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground md:flex-row lg:px-6">
           <p>© {new Date().getFullYear()} {SITE.name}. Alle Rechte vorbehalten.</p>
-          <p>Kfz-Sachverständiger · Offenbach · Rhein-Main</p>
+          <p>Kfz-Sachverständiger · Offenbach am Main · Rhein-Main</p>
         </div>
       </div>
     </footer>
